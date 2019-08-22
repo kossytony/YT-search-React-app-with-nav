@@ -1,21 +1,48 @@
-import React, {Component} from 'react';
-import {AppRegistry, View, Text, Image} from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry, View, Text, Image, StyleSheet, Button } from 'react-native';
+
+
 
 
 
 export default class VideoDetails extends Component {
 
-    render () {
+	constructor(props) {
+		super(props)
 
-        return(
-                <View>
-                    <Image/>
-                    <Text></Text>
-                    <Text></Text>
-                </View>
-        );
-    };
+		this.state = {
+			video: this.props.navigation.state.params.video,
+
+		}
+	};
+
+	render() {
+
+		return (
+			<View>
+				<Image style={styles.imageStyle} source={{ uri: this.state.video.thumbnails.medium.url }} />
+				<Text style={styles.titleStyle}> {this.state.video.title}</Text>
+				<Text>{this.state.video.description}</Text>
+				<Button onPress title='View video online' > </Button>
+			</View>
+		);
+	};
 }
+const styles = StyleSheet.create({
 
+	imageStyle: {
+		alignSelf: 'stretch',
+		height: 180,
+	},
+	titleStyle: {
+		fontWeight: "bold",
+		fontSize: 15,
+		textAlign: 'center'
+	},
+	buttonStyle: {
+		
 
-AppRegistry.registerComponent( 'VideoDetails', ()=>VideoDetails);
+	}
+})
+
+AppRegistry.registerComponent('VideoDetails', () => VideoDetails);

@@ -18,6 +18,7 @@ const API_KEY = 'AIzaSyA0uRbf1NVWW2fb4K48Uj6Sjz83a43TTrs';
       loading: false,
       videos: [],
         touchedVideo : {},
+        pageTest : 'page test msg',
     };
 
   }
@@ -44,6 +45,8 @@ const API_KEY = 'AIzaSyA0uRbf1NVWW2fb4K48Uj6Sjz83a43TTrs';
 showSelectVideo = (obj)=> {
 //     this.setState({touchedVideo : obj})
  console.log(obj);
+ video =obj;
+this.props.navigation.navigate("VideoDetails", {video});
 };
 
   render () {

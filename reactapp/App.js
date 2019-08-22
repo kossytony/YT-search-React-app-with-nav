@@ -6,12 +6,20 @@ import VideoDetails from './components/VideoDetails';
 
 const AppNavigator = createStackNavigator(
   {
-    Home:  MainApp,
-    VideoDetails : VideoDetails 
-  },
+    Home: { 
+      screen : MainApp,
+      navigationOptions : {
+        header : null
+      }
+    },
+    VideoDetails : { 
+    screen : VideoDetails ,
+  }
+},
   {
     initialRouteName: "Home"
   }
+  
 );
 
 const AppContainer = createAppContainer(AppNavigator);
