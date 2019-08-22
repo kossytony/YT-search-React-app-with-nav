@@ -42,8 +42,8 @@ const API_KEY = 'AIzaSyA0uRbf1NVWW2fb4K48Uj6Sjz83a43TTrs';
     console.log(search);
   };
 showSelectVideo = (obj)=> {
-    this.setState({touchedVideo : obj})
-console.log(obj);
+//     this.setState({touchedVideo : obj})
+ console.log(obj);
 };
 
   render () {
