@@ -5,7 +5,7 @@ import AppHeader from "./components/Header";
 import searchYoutube from 'youtube-search-api-with-axios';
 import VideoList from './components/VideoList';
 
-const API_KEY = 'AIzaSyA0uRbf1NVWW2fb4K48Uj6Sjz83a43TTrs';
+const API_KEY = '';
 
  export default class MainApp extends Component {
 
